@@ -33,8 +33,8 @@ export const URLInput: React.FC<URLInputProps> = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <div className="flex flex-col sm:flex-row gap-3">
+    <form onSubmit={handleSubmit} className="space-y-6">
+      <div className="flex flex-col sm:flex-row gap-4">
         <Input
           type="url"
           placeholder="https://www.youtube.com/watch?v=..."
@@ -43,11 +43,11 @@ export const URLInput: React.FC<URLInputProps> = ({ onSubmit }) => {
             setUrl(e.target.value);
             setError('');
           }}
-          className="flex-1 text-base bg-card border-border focus:border-ring"
+          className="flex-1 text-base bg-card/50 border-border/50 focus:border-ring/50 backdrop-blur-sm h-12 px-4 rounded-lg font-light placeholder:text-muted-foreground/60 transition-all duration-300 focus:bg-card/80"
         />
         <Button 
           type="submit" 
-          className="shrink-0 px-6"
+          className="shrink-0 px-8 h-12 rounded-lg font-light tracking-wide hover:scale-105 transition-all duration-300 bg-primary hover:bg-primary/90"
           disabled={!url.trim()}
         >
           <Play className="w-4 h-4 mr-2" />
@@ -56,7 +56,7 @@ export const URLInput: React.FC<URLInputProps> = ({ onSubmit }) => {
       </div>
       
       {error && (
-        <p className="text-destructive text-sm">{error}</p>
+        <p className="text-destructive text-sm font-light animate-fade-in">{error}</p>
       )}
     </form>
   );
