@@ -31,9 +31,16 @@ const Index = () => {
       {/* Header */}
       <header className="border-b border-border/50 p-6 md:p-8 glass-effect relative z-10">
         <div className="max-w-5xl mx-auto animate-fade-in">
-          <h1 className="text-3xl md:text-4xl font-light tracking-wide mb-2 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-            Seraphim
-          </h1>
+          <div className="flex items-center gap-4 mb-2">
+            <img 
+              src="/lovable-uploads/9cfc5456-ac14-4b16-828a-07d57519a111.png" 
+              alt="Seraphim Logo" 
+              className="w-10 h-10 md:w-12 md:h-12"
+            />
+            <h1 className="text-3xl md:text-4xl font-light tracking-wide bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+              Seraphim
+            </h1>
+          </div>
           <p className="text-muted-foreground text-sm md:text-base font-light">
             Minimalist YouTube player with seamless background playback
           </p>
