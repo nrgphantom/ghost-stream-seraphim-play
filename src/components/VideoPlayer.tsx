@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { ArrowLeft, ExternalLink } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 
 interface VideoPlayerProps {
   videoId: string;
@@ -44,12 +44,11 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
   }, [videoId]);
 
   const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1&origin=${window.location.origin}`;
-  const originalUrl = `https://www.youtube.com/watch?v=${videoId}`;
 
   return (
     <div className="space-y-8 animate-fade-in">
       {/* Navigation */}
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-start">
         <Button 
           variant="outline" 
           onClick={onNewVideo} 
@@ -57,17 +56,6 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
         >
           <ArrowLeft className="w-4 h-4" />
           New Video
-        </Button>
-        
-        <Button 
-          variant="outline" 
-          asChild 
-          className="gap-2 bg-card/50 border-border/50 hover:bg-card/80 backdrop-blur-sm h-11 px-6 rounded-lg font-light tracking-wide transition-all duration-300 hover:scale-105"
-        >
-          <a href={originalUrl} target="_blank" rel="noopener noreferrer">
-            <ExternalLink className="w-4 h-4" />
-            YouTube
-          </a>
         </Button>
       </div>
 
@@ -89,10 +77,10 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
         </div>
       </Card>
 
-      {/* Video Info */}
+      {/* Enjoy message */}
       <div className="text-center space-y-2">
-        <p className="text-muted-foreground text-sm font-light">
-          Video ID: {videoId}
+        <p className="text-lg font-light text-foreground tracking-wide">
+          Enjoy your video without ads!
         </p>
         <p className="text-xs text-muted-foreground/60 font-light">
           Playback continues in background
