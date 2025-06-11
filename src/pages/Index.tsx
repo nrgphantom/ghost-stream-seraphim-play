@@ -29,19 +29,19 @@ const Index = () => {
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white/[0.01] rounded-full blur-3xl pointer-events-none" />
 
       {/* Header */}
-      <header className="border-b border-border/50 p-6 md:p-8 glass-effect relative z-10">
+      <header className="border-b border-border/50 p-4 glass-effect relative z-10">
         <div className="max-w-5xl mx-auto animate-fade-in">
-          <div className="flex items-center gap-4 mb-2">
+          <div className="flex items-center gap-3 mb-1">
             <img 
               src="/lovable-uploads/9cfc5456-ac14-4b16-828a-07d57519a111.png" 
               alt="Seraphim Logo" 
-              className="w-10 h-10 md:w-12 md:h-12"
+              className="w-8 h-8"
             />
-            <h1 className="text-3xl md:text-4xl font-light tracking-wide bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+            <h1 className="text-2xl font-light tracking-wide bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
               Seraphim
             </h1>
           </div>
-          <p className="text-muted-foreground text-sm md:text-base font-light">
+          <p className="text-muted-foreground text-sm font-light">
             Minimalist YouTube player with seamless background playback
           </p>
         </div>
@@ -78,8 +78,8 @@ const Index = () => {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border/50 p-6 text-center glass-effect relative z-10">
-        <p className="text-muted-foreground text-xs md:text-sm font-light">
+      <footer className="border-t border-border/50 p-3 text-center glass-effect relative z-10">
+        <p className="text-muted-foreground text-xs font-light">
           Background playback enabled • Optimized for all devices
         </p>
       </footer>
