@@ -43,7 +43,7 @@ export const URLInput: React.FC<URLInputProps> = ({ onSubmit }) => {
             setUrl(e.target.value);
             setError('');
           }}
-          className="flex-1 text-base bg-card/50 border-border/50 focus:border-ring/50 backdrop-blur-sm h-12 px-4 rounded-lg font-light placeholder:text-muted-foreground/60 transition-all duration-300 focus:bg-card/80"
+          className="flex-1 text-base bg-card border-2 border-border focus:border-primary/50 h-12 px-4 rounded-lg font-light placeholder:text-muted-foreground transition-all duration-300 focus:bg-card/90 focus:shadow-lg"
         />
         <Button 
           type="submit" 
