@@ -43,11 +43,11 @@ export const URLInput: React.FC<URLInputProps> = ({ onSubmit }) => {
             setUrl(e.target.value);
             setError('');
           }}
-          className="flex-1 text-base bg-card border-2 border-border focus:border-primary/50 h-12 px-4 rounded-lg font-light placeholder:text-muted-foreground transition-all duration-300 focus:bg-card/90 focus:shadow-lg"
+          className="flex-1 text-base bg-card border-2 border-border/60 focus:border-primary/70 h-12 px-4 rounded-lg font-light placeholder:text-muted-foreground transition-all duration-300 focus:bg-card/95 focus:shadow-[0_0_20px_rgba(255,255,255,0.1)] focus:ring-2 focus:ring-primary/20 hover:border-border hover:shadow-[0_0_15px_rgba(255,255,255,0.05)]"
         />
         <Button 
           type="submit" 
-          className="shrink-0 px-8 h-12 rounded-lg font-light tracking-wide hover:scale-105 transition-all duration-300 bg-primary hover:bg-primary/90"
+          className="shrink-0 px-8 h-12 rounded-lg font-light tracking-wide hover:scale-105 transition-all duration-300 bg-primary hover:bg-primary/90 shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:shadow-[0_0_25px_rgba(255,255,255,0.2)]"
           disabled={!url.trim()}
         >
           <Play className="w-4 h-4 mr-2" />
