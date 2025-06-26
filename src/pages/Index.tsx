@@ -31,9 +31,7 @@ const Index = () => {
               Seraphim
             </h1>
           </div>
-          <p className="text-muted-foreground text-sm font-light">
-            Minimalist YouTube player
-          </p>
+          
         </div>
       </header>
 
