@@ -19,28 +19,13 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
   const [videoTitle, setVideoTitle] = useState('');
 
   useEffect(() => {
-    // Enable background playback by setting proper iframe attributes
     const iframe = iframeRef.current;
     if (iframe) {
-      // These attributes help with background playback
       iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
       iframe.allowFullscreen = true;
     }
 
-    // Fetch video title (basic approach - in a real app you'd use YouTube API)
     setVideoTitle(`YouTube Video: ${videoId}`);
-
-    // Handle visibility change for background playback
-    const handleVisibilityChange = () => {
-      // The iframe will continue playing even when tab is not visible
-      console.log('Tab visibility changed, video continues playing');
-    };
-
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-
-    return () => {
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-    };
   }, [videoId]);
 
   const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1&origin=${window.location.origin}`;
@@ -81,9 +66,6 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
       <div className="text-center space-y-2">
         <p className="text-lg font-light text-foreground tracking-wide">
           Enjoy your video without ads!
-        </p>
-        <p className="text-xs text-muted-foreground/60 font-light">
-          Playback continues in background
         </p>
       </div>
     </div>

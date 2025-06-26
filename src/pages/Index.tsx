@@ -42,7 +42,7 @@ const Index = () => {
             </h1>
           </div>
           <p className="text-muted-foreground text-sm font-light">
-            Minimalist YouTube player with seamless background playback
+            Minimalist YouTube player
           </p>
         </div>
       </header>
@@ -80,7 +80,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="border-t border-border/50 p-3 text-center glass-effect relative z-10">
         <p className="text-muted-foreground text-xs font-light">
-          Background playback enabled • Optimized for all devices
+          Optimized for all devices
         </p>
       </footer>
     </div>
